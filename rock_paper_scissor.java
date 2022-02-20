@@ -5,11 +5,17 @@ public class rock_paper_scissor
     Scanner sc = new Scanner(System.in);
     Random rand = new Random();
     int comp_inp, user_inp, input;
-    void random_no()
+    void random_no()                       //to generate the random number on behalf of computer to take input
     {
         comp_inp = 1 + rand.nextInt(3);
+        /*the options corresponding to computer are
+           1. rock
+           2.paper
+           3.scissor
+           */
+          
     }
-    int intro()
+    int intro()                          //will be the introduction page
     {
         System.out.println("                                WELCOME TO ROCK PAPER SCISSOR GAME");
         System.out.println("                               ************************************");
@@ -23,7 +29,7 @@ public class rock_paper_scissor
         input = sc.nextInt();
         return input;
     }
-    void tutorial()
+    void tutorial()                         //show the user how to play the game 
     {
         System.out.println("\n                                        HOW TO PLAY");
         System.out.println("                                       *************");
@@ -45,7 +51,7 @@ public class rock_paper_scissor
         {        }
     }
 
-    void userinput()
+    void userinput()                         // to take the input from user
     {
         System.out.println("\n                     NEW GAME");
         System.out.println("                    **********");
@@ -81,7 +87,7 @@ public class rock_paper_scissor
                 break;
         }
     }
-    void condition()
+    void condition()                    // the testing condition to determine who won computer or user 
     {
       switch(comp_inp)
       {
@@ -127,7 +133,7 @@ public class rock_paper_scissor
       }
     }
 }
-class run
+class run                        // new class to run main funtion
 {
     public static void main(String[]args)
     {
