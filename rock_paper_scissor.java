@@ -5,22 +5,14 @@ public class rock_paper_scissor
     Scanner sc = new Scanner(System.in);
     Random rand = new Random();
     int comp_inp, user_inp, input;
-    void random_no()                       //to generate the random number on behalf of computer to take input
+    void random_no()
     {
         comp_inp = 1 + rand.nextInt(3);
-        /*the options corresponding to computer are
-           1. rock
-           2.paper
-           3.scissor
-           */
-          
     }
-    int intro()                          //will be the introduction page
+    int intro()
     {
         System.out.println("                                WELCOME TO ROCK PAPER SCISSOR GAME");
         System.out.println("                               ************************************");
-        System.out.println("                                        DEVELOP BY VAIBHAV");
-        System.out.println("                                       ********************");
         System.out.println("                        MENU");
         System.out.println("                       ------ ");
         System.out.println("                    1. TUTORIAL");
@@ -29,7 +21,7 @@ public class rock_paper_scissor
         input = sc.nextInt();
         return input;
     }
-    void tutorial()                         //show the user how to play the game 
+    void tutorial()
     {
         System.out.println("\n                                        HOW TO PLAY");
         System.out.println("                                       *************");
@@ -42,6 +34,9 @@ public class rock_paper_scissor
         System.out.print("                      ->IF YOU WANT TO CHOOSE SCISSOR AS YOUR OPTION THAN JUST CHOOSE 1 AS YOUR INPUT");
         System.out.println("                    ->IF YOU WANT TO CHOOSE ROCK AS YOUR OPTION THAN JUST CHOOSE 2 AS YOUR INPUT");
         System.out.println("                    ->IF YOU WANT TO CHOOSE PAPER AS YOUR OPTION THAN JUST CHOOSE 3 AS YOUR INPUT");
+        System.out.println("     NOTE:-        ROCK DESTROY SCISSOR  ");
+        System.out.println("                   PAPER HOLDS THE ROCK  ");
+        System.out.println("                   SCISSOR CUTS PAPER ");
         System.out.println("             TAKING TO NEW GAME WINDOW ");
         try
         {
@@ -51,7 +46,7 @@ public class rock_paper_scissor
         {        }
     }
 
-    void userinput()                         // to take the input from user
+    void userinput()
     {
         System.out.println("\n                     NEW GAME");
         System.out.println("                    **********");
@@ -87,7 +82,7 @@ public class rock_paper_scissor
                 break;
         }
     }
-    void condition()                    // the testing condition to determine who won computer or user 
+    void condition()
     {
       switch(comp_inp)
       {
@@ -133,29 +128,7 @@ public class rock_paper_scissor
       }
     }
 }
-class run                        // new class to run main funtion
-{
-    public static void main(String[]args)
-    {
-        int choice;char b;
-        Scanner sd=new Scanner(System.in);
-        rock_paper_scissor gm=new rock_paper_scissor();
-        choice=gm.intro();
-        switch(choice)
-        {
-            case 1 : gm.tutorial();
-            case 2 : do
-                     {
-                         gm.random_no();
-                         gm.userinput();
-                         gm.condition();
-                         System.out.print("WANT TO PLAY ONCE MORE: -");
-                         b =sd.next().charAt(0);
-                     }while( b=='y' || b=='Y');
-                     break;
-        }
-    }
-}
+
 
 
 

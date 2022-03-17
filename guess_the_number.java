@@ -13,8 +13,6 @@ public class guess_the_number
     {
         System.out.println("                                WELCOME TO GUESS THE NUMBER GAME");
         System.out.println("                               **********************************");
-        System.out.println("                                        DEVELOP BY VAIBHAV");
-        System.out.println("                                       ********************");
         System.out.println("                        MENU");
         System.out.println("                       ------ ");
         System.out.println("                    1. TUTORIAL");
@@ -77,25 +75,4 @@ public class guess_the_number
             }
     }
 }
-class run                       // new clas to run main function
-{
-    public static void main(String[]args)
-    {
-        int choice;
-        guess_the_number  gm=new guess_the_number ();
-        choice=gm.intro();
-        switch(choice)
-        {
-            case 1 : gm.tutorial();
-            case 2 : gm.user_input();
-                     gm.condition();
-                     do
-                     {
-                        gm.recall();
-                        gm.condition();
-                     }while(!(gm.user_inp==gm.comp_inp ));
-                     System.out.print("YOU TAKE "+gm.guess +" CHANCES TO GUESS CORRECTLY. ");
-                     break;
-        }
-    }
-}
+
